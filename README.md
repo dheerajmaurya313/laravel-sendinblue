@@ -91,3 +91,66 @@ If you discover any security related issues, please email duncan@mcclean.co.uk i
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+लारवेल के लिए सेंडिनब्लू
+Packagist बिल्ड स्थिति कुल डाउनलोड पर नवीनतम संस्करण
+
+यह पैकेज Laravel 5 अनुप्रयोगों के लिए Sendinblue API के आसपास एक आसान आवरण प्रदान करता है। इस पैकेज के दृश्यों के पीछे, हम PHP के लिए आधिकारिक Sendinblue SDK का उपयोग करते हैं।
+
+यह पैकेज एक मेल ड्राइवर नहीं है, बस संपर्कों और अन्य Sendinblue चीजों के लिए एक प्रबंधक है। इसे Spatie के न्यूज़लैटर पैकेज के Sendinblue संस्करण की तरह समझें। यह पैकेज किसी भी तरह से Sendinblue से संबद्ध नहीं है।
+
+यहाँ उपलब्ध तरीकों में से कुछ हैं:
+
+...
+Sendinblue का उपयोग करें;
+...
+
+// एक ईमेल बनाएं, सिर्फ एक ईमेल के साथ
+Sendinblue :: createContact ('bob@example.com ');
+
+// अधिक जानकारी के साथ, एक संपर्क बनाएँ
+Sendinblue :: createContact ('billy@example.com ', [
+    'FNAME' => 'बिली',
+    'LNAME' => 'स्मिथ'
+]);
+
+// एक संपर्क हटाएं
+Sendinblue :: deleteContact ('jen@example.com ');
+
+// एक फ़ोल्डर बनाएँ
+Sendinblue :: createFolder ('व्यक्तिगत');
+
+// एक सूची बनाएं
+// पहला परम नाम है, दूसरा फ़ोल्डर की आईडी है
+Sendinblue :: createList ('ब्लॉग मेलिंग सूची', 7);
+स्थापना
+आप संगीतकार के माध्यम से पैकेज स्थापित कर सकते हैं:
+
+कंपोजर को डैमेलियन / लार्वेल-सेंडिनब्लू की आवश्यकता होती है
+फिर आप कॉन्फ़िगरेशन फ़ाइल प्रकाशित कर सकते हैं:
+
+php कारीगर विक्रेता: प्रकाशित --provider = "डैमक्लेन \ Sendinblue \ SendinblueServiceProvider"
+प्रयोग
+पैकेज स्थापित करने और कॉन्फिगर फ़ाइल प्रकाशित करने के बाद, आपको अपनी Sendinblue API कुंजी को अपने .env फ़ाइल में जोड़ना होगा:
+
+SENDINBLUE_APIKEY = ...
+तो आप बस Sendinblue सामान का उपयोग कर सकते हैं, जैसे:
+
+Sendinblue का उपयोग करें;
+
+Sendinblue :: createContact ('bob@example.com ');
+परीक्षण
+विक्रेता / बिन / phpunit
+बदलाव का
+कृपया अधिक जानकारी के लिए CHANGELOG देखें जो हाल ही में बदल गया है।
+
+योगदान
+कृपया विवरण के लिए अनुबंध देखें।
+
+सुरक्षा
+यदि आपको सुरक्षा संबंधी कोई समस्या है, तो कृपया मुद्दे ट्रैकर का उपयोग करने के बजाय duncan@mcclean.co.uk पर ईमेल करें।
+
+क्रेडिट
+डंकन मैक्लेन
+सभी योगदानकर्ता
+लाइसेंस
+MIT लाइसेंस (MIT)। अधिक जानकारी के लिए कृपया लाइसेंस फ़ाइल देखें।
